@@ -1,0 +1,51 @@
+body,
+html,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: #f8f7f5;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: space-between;
+  align-items: center;
+}
+
+section {
+  margin: 1rem 0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin-top: 4rem;
+  font-style: italic;
+}
+
+h1 {
+  font-family: courier, monospace;
+  font-size: calc(5vw);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 1.5rem;
+  text-align: center;
+}
+
+h1 > span {
+  display: block;
+}
