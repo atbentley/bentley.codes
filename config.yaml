@@ -1,0 +1,14 @@
+baseURL: "https://bentley.codes/"
+languageCode: "en-us"
+title: "Andrew Bentley"
+
+menu:
+  nav:
+  - identifier: home
+    name: Andrew Bentley
+    url: /
+    weight: 0
+  - identifier: kanban
+    name: Kanban
+    url: /kanban/
+    weight: 1

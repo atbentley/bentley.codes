@@ -11,8 +11,11 @@
 {{ define "main" }}
   <header>
     <nav>
-      <div>Landing</div>
-      <div>Kanban</div>
+      {{ $current := . }}
+      {{ range sort .Site.Menus.nav "Weight" }}
+        {{ $active := eq $current.RelPermalink .URL }}
+        <a class="{{ if $active }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
     </nav>
   </header>
   <main>

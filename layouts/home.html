@@ -1,4 +1,13 @@
 {{ define "main" }}
+  <header>
+    <nav>
+      {{ $current := . }}
+      {{ range sort .Site.Menus.nav "Weight" }}
+        {{ $active := eq $current.RelPermalink .URL }}
+        <a class="{{ if $active }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </header>
   <section>
     <h1><span>Andrew</span> <span>Bentley</span></h1>
   </section>
