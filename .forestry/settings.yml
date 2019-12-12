@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: kanban
+  path: content/kanban
   label: Kanban
   create: documents
   match: "**/*"
