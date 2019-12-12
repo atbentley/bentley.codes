@@ -17,19 +17,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ with resources.Get "css/style.css" | minify }}
-      <style>{{ .Content | safeCSS }}</style>
+    {{ block "ciritical-css" . }}
+      {{ with resources.Get "css/critical.css" | minify }}
+        <style>{{ .Content | safeCSS }}</style>
+      {{ end }}
     {{ end }}
+    {{ block "css" . }}{{ end }}
   </head>
 
   <body>
-    <section>
-      <h1><span>Andrew</span> <span>Bentley</span></h1>
-    </section>
-    <section>
-      {{ block "main" . }}{{ end }}
-    </section>
+    {{ block "main" . }}
+      <section>
+        <h1><span>Andrew</span> <span>Bentley</span></h1>
+      </section>
+      <section>
+        {{ .Content }}
+      </section>
+    {{ end }}
   </body>
 </html>

@@ -1,0 +1,44 @@
+{{ define "ciritical-css" }}
+  {{ with resources.Get "css/kanban-critical.css" | minify }}
+    <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
+{{ end }}
+{{/* {{ define "css" }}
+  {{ $style := resources.Get "css/kanban.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ end }} */}}
+
+{{ define "main" }}
+  <header>
+    <nav>
+      <div>Landing</div>
+      <div>Kanban</div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Todo</h2>
+      {{ range where .Site.Pages "Params.status" "todo" }}
+      <div>
+        <h3>{{ .Page.Title }}</h3>
+      </div>
+      {{ end }}
+    </section>
+    <section>
+      <h2>Doing</h2>
+      {{ range where .Site.Pages "Params.status" "doing" }}
+      <div>
+        <h3>{{ .Page.Title }}</h3>
+      </div>
+      {{ end }}
+    </section>
+    <section>
+      <h2>Done</h2>
+      {{ range where .Site.Pages "Params.status" "done" }}
+      <div>
+        <h3>{{ .Page.Title }}</h3>
+      </div>
+      {{ end }}
+    </section>
+  </main>
+{{ end }}
