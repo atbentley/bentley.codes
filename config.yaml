@@ -8,7 +8,7 @@ menu:
     name: Andrew Bentley
     url: /
     weight: 0
-  - identifier: kanban
-    name: Kanban
-    url: /kanban/
-    weight: 1
+  - identifier: about
+    name: About
+    url: /about/
+    weight: 2
