@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>bentley.codes</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+        list-style-position: inside;
+    }
+
+    html {
+        scrollbar-gutter: stable both-edges;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    p, ul, ol {
+      overflow-wrap: break-word;
+      line-height: 1.7em;
+      margin-bottom: 1em;
+      text-align: justify;
+    }
+
+    :root {
+      color-scheme: light dark;
+    }
+
+    @media screen and (min-width: 800px) {
+        body {
+            width: 800px
+        }
+    }
+
+    body {
+        margin: 0 auto;
+        padding: 0 1.5em;
+        font-size: 17px;
+        text-rendering: optimizeLegibility;
+        font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+        font-weight: 200;
+        font-kerning: auto;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .container {
+        padding-bottom: 1em;
+    }
+
+    header {
+        padding-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+        font-size: 4em;
+        font-weight: 400;
+        background: linear-gradient(to bottom, transparent 80%, #F1CFFC 80%, #F1CFFC 90%, transparent 90%);
+        width: fit-content;
+    }
+
+    h1 a, article a {
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: underline;
+        color: initial;
+    }
+
+    h2 {
+        font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    h2 span {
+        display: block;
+    }
+
+    h2 span:first-child {
+        opacity: 0.6;
+        font-size: 0.9em;
+    }
+
+    #stellar-cortex-demo {
+        max-width: 640px;
+        aspect-ratio: 640 / 360;
+        outline: 5px solid #F1CFFC;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #stellar-cortex-demo-loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #stellar-cortex-demo h3 {
+        padding-top: 0;
+    }
+
+    #stellar-cortex-demo:hover {
+        background: #F1CFFC;
+    }
+
+    #stellar-cortex {
+        position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="/">bentley.codes</a></h1>
+    </header>
+    <section class="section">
+      <div class="container">
+        {% block content %} {% endblock %}
+      </div>
+    </section>
+  </div>
+</body>
+</html>

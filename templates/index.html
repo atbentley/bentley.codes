@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set section = get_section(path="stellar-cortex/_index.md") %}
+{% for page in section.pages %}
+<article>
+  <a href = "{{ page.permalink | safe }}">
+    <h2>
+      <span>Stellar Cortex / {{ page.extra.entry}}</span>
+      <span>{{ page.title }}</span>
+    </h2>
+    <p>{{ page.description }}</p>
+  </a>
+<article>
+{% endfor %}
+{% endblock content %}

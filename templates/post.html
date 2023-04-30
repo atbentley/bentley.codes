@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>
+  <span>Stellar Cortex / {{ page.extra.entry}}</span>
+  <span>{{ page.title }}</span>
+</h2>
+<p>{{ page.date }} - <a target="_blank" href="{{ config.extra.source_root | safe }}{{ page.extra.source | safe }}">source</a></p>
+{{ page.content | safe }}
+{% endblock content %}
