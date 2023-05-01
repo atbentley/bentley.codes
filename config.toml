@@ -1,7 +1,9 @@
 # https://www.getzola.org/documentation/getting-started/configuration/
 base_url = "https://bentley.codes"
+description = "bentley's blog"
 compile_sass = false
 build_search_index = false
+generate_feed = true
 
 [markdown]
 highlight_code = false

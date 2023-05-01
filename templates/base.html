@@ -3,7 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title>bentley.codes</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% elif config.description %}
+  <meta name="description" content="{{ config.description }}" />
+  {% endif %}
+  {% elif config.description %}
+  <meta name="description" content="{{ config.description }}" />
+  {% endif %}
+
+  <title>{% block title %}bentley.codes{% endblock title %}</title>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -13,6 +25,7 @@
 
     li {
         list-style-position: inside;
+        margin-bottom: 0.3em;
     }
 
     html {
@@ -34,12 +47,6 @@
       color-scheme: light dark;
     }
 
-    @media screen and (min-width: 800px) {
-        body {
-            width: 800px
-        }
-    }
-
     body {
         margin: 0 auto;
         padding: 0 1.5em;
@@ -49,6 +56,18 @@
         font-weight: 200;
         font-kerning: auto;
         -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    @media screen and (min-width: 800px) {
+        body {
+            width: 800px
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        body {
+            padding: 0 1em;
+        }
     }
 
     .container {
@@ -68,13 +87,25 @@
         width: fit-content;
     }
 
-    h1 a, article a {
+    @media screen and (max-width: 400px) {
+        h1 {
+            font-size: 3em;
+        }
+    }
+
+    h1 a, h2 a, h3 a {
         text-decoration: none;
     }
 
     a {
         text-decoration: underline;
         color: initial;
+    }
+
+    p.readmore {
+        text-align: right;
+        font-size: 0.9em;
+        font-style: italic;
     }
 
     h2 {
@@ -142,5 +173,6 @@
       </div>
     </section>
   </div>
+  <script data-goatcounter="https://bentley-codes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

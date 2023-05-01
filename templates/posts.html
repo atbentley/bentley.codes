@@ -3,13 +3,14 @@
 {% block content %}
 {% for page in section.pages %}
 <article>
-  <a href = "{{ page.permalink | safe }}">
-    <h2>
+  <h2>
+    <a href="{{ page.permalink | safe }}">
       <span>Stellar Cortex / {{ page.extra.entry}}</span>
       <span>{{ page.title }}</span>
-    </h2>
-    <p>{{ page.description }}</p>
-  </a>
+    </a>
+  </h2>
+  {{ page.summary | safe }}
+  <p class="readmore"><a href="{{ page.permalink | safe }}">continue reading »</a></p>
 <article>
 {% endfor %}
 {% endblock content %}
