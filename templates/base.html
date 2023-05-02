@@ -17,26 +17,31 @@
 
   <title>{% block title %}bentley.codes{% endblock title %}</title>
   <style>
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     li {
-        list-style-position: inside;
-        margin-bottom: 0.3em;
+      list-style-position: inside;
+      margin-bottom: 0.3em;
     }
 
     html {
-        scrollbar-gutter: stable both-edges;
+      scrollbar-gutter: stable both-edges;
     }
 
-    html, body {
-        height: 100%;
+    html,
+    body {
+      height: 100%;
     }
 
-    p, ul, ol {
+    p,
+    ul,
+    ol {
       overflow-wrap: break-word;
       line-height: 1.7em;
       margin-bottom: 1em;
@@ -48,116 +53,118 @@
     }
 
     body {
-        margin: 0 auto;
-        padding: 0 1.5em;
-        font-size: 17px;
-        text-rendering: optimizeLegibility;
-        font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-        font-weight: 200;
-        font-kerning: auto;
-        -webkit-font-smoothing: subpixel-antialiased;
+      margin: 0 auto;
+      padding: 0 1.5em;
+      font-size: 17px;
+      text-rendering: optimizeLegibility;
+      font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+      font-weight: 200;
+      font-kerning: auto;
+      -webkit-font-smoothing: subpixel-antialiased;
     }
 
     @media screen and (min-width: 800px) {
-        body {
-            width: 800px
-        }
+      body {
+        width: 800px
+      }
     }
 
     @media screen and (max-width: 400px) {
-        body {
-            padding: 0 1em;
-        }
+      body {
+        padding: 0 1em;
+      }
     }
 
     .container {
-        padding-bottom: 1em;
+      padding-bottom: 1em;
     }
 
     header {
-        padding-top: 1em;
-        margin-bottom: 1em;
+      padding-top: 1em;
+      margin-bottom: 1em;
     }
 
     h1 {
-        font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-        font-size: 4em;
-        font-weight: 400;
-        background: linear-gradient(to bottom, transparent 80%, #F1CFFC 80%, #F1CFFC 90%, transparent 90%);
-        width: fit-content;
+      font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+      font-size: 4em;
+      font-weight: 400;
+      background: linear-gradient(to bottom, transparent 80%, #F1CFFC 80%, #F1CFFC 90%, transparent 90%);
+      width: fit-content;
     }
 
     @media screen and (max-width: 400px) {
-        h1 {
-            font-size: 3em;
-        }
+      h1 {
+        font-size: 3em;
+      }
     }
 
-    h1 a, h2 a, h3 a {
-        text-decoration: none;
+    h1 a,
+    h2 a,
+    h3 a {
+      text-decoration: none;
     }
 
     a {
-        text-decoration: underline;
-        color: initial;
+      text-decoration: underline;
+      color: initial;
     }
 
     p.readmore {
-        text-align: right;
-        font-size: 0.9em;
-        font-style: italic;
+      text-align: right;
+      font-size: 0.9em;
+      font-style: italic;
     }
 
     h2 {
-        font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-        padding-top: 1em;
-        margin-bottom: 0.5em;
-        font-size: 2em;
-        font-weight: 400;
+      font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+      padding-top: 1em;
+      margin-bottom: 0.5em;
+      font-size: 2em;
+      font-weight: 400;
     }
 
     h3 {
-        font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-        padding-top: 1em;
-        margin-bottom: 0.5em;
-        font-size: 1.5em;
-        font-weight: 600;
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+      padding-top: 1em;
+      margin-bottom: 0.5em;
+      font-size: 1.5em;
+      font-weight: 600;
     }
 
     h2 span {
-        display: block;
+      display: block;
     }
 
     h2 span:first-child {
-        opacity: 0.6;
-        font-size: 0.9em;
+      opacity: 0.6;
+      font-size: 0.9em;
     }
 
     #stellar-cortex-demo {
-        max-width: 640px;
-        aspect-ratio: 640 / 360;
-        outline: 5px solid #F1CFFC;
-        margin: 0 auto;
-        position: relative;
+      max-width: 640px;
+      aspect-ratio: 640 / 360;
+      outline: 5px solid #F1CFFC;
+      margin: 0 auto;
+      position: relative;
     }
 
     #stellar-cortex-demo-loader {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
     }
 
     #stellar-cortex-demo h3 {
-        padding-top: 0;
+      padding-top: 0;
     }
 
     #stellar-cortex-demo:hover {
-        background: #F1CFFC;
+      background: #F1CFFC;
     }
 
     #stellar-cortex {
-        position: absolute;
+      position: absolute;
     }
   </style>
 </head>
@@ -173,6 +180,6 @@
       </div>
     </section>
   </div>
-  <script data-goatcounter="https://bentley-codes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
+
 </html>
